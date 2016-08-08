@@ -7,6 +7,8 @@
   	  "JENKINS_AGENT_ROLE": "{{#roles.jenkins-agent-role}}{{roles.jenkins-agent-role}}{{/roles.jenkins-agent-role}}{{^roles.jenkins-agent-role}}*{{/roles.jenkins-agent-role}}",
       "JENKINS_AGENT_USER": "{{#security.strict-mode}}{{security.strict-mode-user}}{{/security.strict-mode}}{{^security.strict-mode}}root{{/security.strict-mode}}",
       "JENKINS_FRAMEWORK_NAME": "{{service.name}}",
+      "JENKINS_MESOS_PRINCIPAL": "{{security.principal}}",
+      "JENKINS_MESOS_SECRET": "{{security.secret}}",
       "JENKINS_CONTEXT": "/service/{{service.name}}",
       "JENKINS_MESOS_MASTER": "{{advanced.mesos-master}}",
       {{#networking.root-url}}

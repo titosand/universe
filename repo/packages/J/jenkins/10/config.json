@@ -67,6 +67,16 @@
             "description": "Security configuration properties for Jenkins on DC/OS.",
             "type": "object",
             "properties": {
+                "principal": {
+                    "description": "The Jenkins Scheduler will register with Mesos with this principal.",
+                    "type": "string",
+                    "default": ""
+                },
+                "secret": {
+                    "description": "The Jenkins Scheduler will register with Mesos with this secret.",
+                    "type": "string",
+                    "default": ""
+                },
                 "strict-mode": {
                     "description": "Enabled if Enterprise DC/OS is provisioned using the 'strict' security mode flag. When enabled, tasks run as the user specified below.",
                     "type": "boolean",
